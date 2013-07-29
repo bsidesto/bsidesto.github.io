@@ -133,9 +133,10 @@ hr {
 #headerwrap h1 {
 	font-family: 'Open Sans Condensed', sans-serif;
 	font-weight:600;
-	font-size:70px;
+	font-size:50px;
 	color:white;
 	margin-bottom:25px;
+    text-shadow: 0.1em 0.1em #333;
 }
 
 /********** WELCOME WRAP **********/
