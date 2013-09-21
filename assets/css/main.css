@@ -166,6 +166,12 @@ hr {
 	line-height:34px;
 }
 
+#welcomewrap p {
+	text-align:left;
+	font-family: 'Poly', serif;
+	font-size:16px;
+}
+
 /********** CFP WRAP **********/
 #cfpwrap {
 	display:block;
@@ -181,6 +187,8 @@ hr {
 
 #cfpwrap p {
 	text-align:left;
+	font-family: 'Poly', serif;
+	font-size:16px;
 }
 
 /********** Speaker WRAP **********/
@@ -198,6 +206,8 @@ hr {
 
 #speakerwrap p {
 	text-align:left;
+	font-family: 'Poly', serif;
+	font-size:16px;
 }
 
 /********** SCHEDULE WRAP **********/
@@ -215,6 +225,8 @@ hr {
 
 #schedulewrap p {
 	text-align:left;
+	font-family: 'Poly', serif;
+	font-size:16px;
 }
 
 /********** SPONSOR WRAP **********/
@@ -232,6 +244,9 @@ hr {
 
 #sponsorwrap p {
 	text-align:left;
+	font-family: 'Poly', serif;
+	font-size:16px;
+	
 }
 
 
@@ -276,6 +291,8 @@ hr {
 
 #aboutwrap p {
 	text-align:left;
+	font-family: 'Poly', serif;
+	font-size:16px;
 }
 
 /********** PROJECT WRAP **********/
