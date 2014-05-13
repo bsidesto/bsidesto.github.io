@@ -1,48 +1,89 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta charset="utf-8" />
-    <title>BSidesTo 2014</title>
-    <script src="js/jquery-1.7.1.min.js"></script>
-    <script src="js/jquery.mousewheel-min.js"></script>
-    <script src="js/jquery.terminal-min.js"></script>
-    <link href="css/jquery.terminal.css" rel="stylesheet"/>
-    <script>
-     var logo ="    ____ _____ _     __         __________     ___  ____ _____ __\n   / __ ) ___/(_)___/ /__  ______  __/ __ \\   |__ \\/ __ <  / // /\n  / __  \\__ \\/ / __  / _ \\/ ___// / / / / /   __/ / / / / / // /_\n / /_/ /__/ / / /_/ /  __(__  )/ / / /_/ /   / __/ /_/ / /__  __/\n/_____/____/_/\\__,_/\\___/____//_/  \\____/   /____\\____/_/  /_/   \n                                                                 \n"
-     var files = {".history":"http://bsidesto.ca/2013",
-                  "about.txt":"The second edition of BSidesTO is coming!\nJoin us once again for a day of security talks and other related hijinks.\n\nWe'll be convening the weekend before SecTor. Expect to hear more soon.",
-                  "cfp.txt":"Coming Soon!",
-                  "speakers.txt":"Coming Soon!",
-                  "registration.txt":"Coming Soon!",
-                  "sponsors.txt":"Want to be a sponsor? Please email us at info@bsidesto.ca",
-                  "venue.txt":"Coming Soon!",};
-               
-    jQuery(document).ready(function($) {
-         $('body').terminal({
-             help: function() { this.echo("It's a UNIX system! I know this!\nTry `ls` and `cat`."); },
-             ls: function() {
-                 for (var file in files) {
-                     this.echo(file)
-                 }
-             },
-             cat: function(filename) {
-                 this.echo(files[filename]);
-             },
+    <head>
+        <meta charset="utf-8" />
+        <title>BSidesTo 2014</title>
+        <script src="js/jquery-1.7.1.min.js"></script>
+        <script src="js/jquery.mousewheel-min.js"></script>
+        <script src="js/jquery.terminal-min.js"></script>
+        <link href="css/jquery.terminal.css" rel="stylesheet"/>
+        <script>
+         var logo ="    ____ _____ _     __         __________     ___  ____ _____ __\n   / __ ) ___/(_)___/ /__  ______  __/ __ \\   |__ \\/ __ <  / // /\n  / __  \\__ \\/ / __  / _ \\/ ___// / / / / /   __/ / / / / / // /_\n / /_/ /__/ / / /_/ /  __(__  )/ / / /_/ /   / __/ /_/ / /__  __/\n/_____/____/_/\\__,_/\\___/____//_/  \\____/   /____\\____/_/  /_/   \n                                                                 \n"
+         var files = {".history":"http://bsidesto.ca/2013",
+                      "about.txt":"The second edition of BSidesTO is coming!\nJoin us once again for a day of security talks and other related hijinks.\n\nWe'll be convening the weekend before SecTor. Expect to hear more soon.",
+                      "cfp.txt":"Coming Soon!",
+                      "speakers.txt":"Coming Soon!",
+                      "registration.txt":"Coming Soon!",
+                      "sponsors.txt":"Want to be a sponsor? Please email us at info@bsidesto.ca",
+                      "venue.txt":"Coming Soon!",};
 
-             vi: function() {
-                 this.echo("[[;red;]Command 'Sublime Text 2' not found]");
-             },
-
-             vim: function() {
-                 this.echo("[[;red;]Command 'Sublime Text 3' not found]");
-             },
-
-             emacs: function() {
-                 this.echo("[[;red;]Segmentation fault]");
+         
+         var in_home_dir=true;
+         function prompter(callback) {
+             if (in_home_dir) {
+                 callback("[[gb;gray;]gibson:~ $ ]")
              }
-         }, { prompt: "[[gb;gray;]gibson:~ $ ]", greetings:logo + "Coming October 2014. <info@bsidesto.ca>\n"});
-    });
-    </script>
-  </head>
-<body>
-</body>
+             else {
+                 callback("[[gb;gray;]gibson:/blackmail/2014 $ ]")
+             }
+             
+         }
+         
+         jQuery(document).ready(function($) {
+             $('body').terminal({
+                 help: function() { this.echo("It's a UNIX system! I know this!\nTry `ls` and `cat`."); },
+                 ls: function() {
+                     if (in_home_dir) {
+                         for (var file in files) {
+                             this.echo(file);
+                         }
+                     }
+                     else {
+                         this.echo("bsidesto\nnsa_did_heartbleed.avi")
+                     }
+                 },
+                 cat: function(filename) {
+                     if(in_home_dir && files.hasOwnProperty(filename)) {
+                         this.echo(files[filename]);
+                     }
+                     else if (!in_home_dir && filename == "nsa_did_heartbleed.avi") {
+                         this.echo("�������������������������������������������������������������������������������������������������������������������������������")
+                     }
+                     else {
+                         this.echo("[[;red;]cat: "+ filename +": No such file or directory]")
+                     }
+                 },
+
+                 vi: function() {
+                     this.echo("[[;red;]Command 'Sublime Text 2' not found]");
+                 },
+
+                 vim: function() {
+                     this.echo("[[;red;]Command 'Sublime Text 3' not found]");
+                 },
+
+                 emacs: function() {
+                     this.echo("[[;red;]Segmentation fault]");
+                 },
+
+                 cd: function() {
+                     in_home_dir = !in_home_dir;
+                 },
+
+                 mplayer: function(filename) {
+                     if (!in_home_dir && filename == "nsa_did_heartbleed.avi") {
+                         window.open("https://www.youtube.com/watch?v=uGGIrvWIFKw&feature=kp", '_blank');
+                     }
+                     else {
+                         this.echo("[[;red;]mplayer: "+ filename +": No such file or directory]")
+                     }
+                     
+                 }
+             }, { prompt: prompter, greetings:logo + "Coming October 2014. <info@bsidesto.ca>\n", completion:true, checkArity:false});
+
+         });
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
