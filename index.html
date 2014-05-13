@@ -27,8 +27,19 @@
              },
              cat: function(filename) {
                  this.echo(files[filename]);
-             }
+             },
 
+             vi: function() {
+                 this.echo("[[;red;]Command 'Sublime Text 2' not found]");
+             },
+
+             vim: function() {
+                 this.echo("[[;red;]Command 'Sublime Text 3' not found]");
+             },
+
+             emacs: function() {
+                 this.echo("[[;red;]Segmentation fault]");
+             }
          }, { prompt: "[[gb;gray;]gibson:~ $ ]", greetings:logo + "Coming October 2014. <info@bsidesto.ca>\n"});
     });
     </script>
