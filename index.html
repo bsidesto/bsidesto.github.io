@@ -8,14 +8,19 @@
         <script src="js/jquery.terminal-min.js"></script>
         <link href="css/jquery.terminal.css" rel="stylesheet"/>
         <script>
+		
+		
          var logo ="    ____ _____ _     __         __________     ___  ____ _____ __\n   / __ ) ___/(_)___/ /__  ______  __/ __ \\   |__ \\/ __ <  / // /\n  / __  \\__ \\/ / __  / _ \\/ ___// / / / / /   __/ / / / / / // /_\n / /_/ /__/ / / /_/ /  __(__  )/ / / /_/ /   / __/ /_/ / /__  __/\n/_____/____/_/\\__,_/\\___/____//_/  \\____/   /____\\____/_/  /_/   \n                                                                 \n"
-         var files = {".history":"http://bsidesto.ca/2013",
-                      "about.txt":"The second edition of BSidesTO is coming!\nJoin us once again for a day of security talks and other related hijinks.\n\nWe'll be convening the weekend before SecTor. Expect to hear more soon.",
-                      "cfp.txt":"Coming Soon!",
+        
+		 var files = {".history":"http://bsidesto.ca/2013",
+                      "about.txt":"The second edition of BSidesTO is coming!\nJoin us once again for a day of security talks and other related hijinks.\n\nThis year we'll dropping knowledge and being a community in late November 2014",
+                      "cfp.txt":"the CFP is open until 9am on October 27th. Submittion details are in http://www.bsideto.ca/gibson/submit.txt",
+					  "conduct.txt":"do no evil, don't be a jerk/racist/sexist/violent/demeaning, drink responsibly, respect the venue, welcome 1st timers, tell the crew about problems and we'll respond, nuff said!",
                       "speakers.txt":"Coming Soon!",
-                      "registration.txt":"Coming Soon!",
+                      "registration.txt":"Registration will open on September 28th",
                       "sponsors.txt":"Want to be a sponsor? Please email us at info@bsidesto.ca",
-                      "venue.txt":"Coming Soon!",};
+                      "venue.txt":"Coming Soon!",
+				  	  "password.txt":"access denied (file owned by root)",};
 
          
          var in_home_dir=true;
@@ -29,6 +34,52 @@
              
          }
          
+ 		var asciiImg = 		    "\n  \
+		WWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		WWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		WWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		WMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMXkx0XOdodloxk0NMWNWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNd;.     .   ....;oddOOMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWOc'      .. .............;:ONWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNo.            ....  ''.''.....'oXWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMd.         .  .  .........,.......cKXMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMX,                  ....'',,;,,,..... .,oNMMMMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMW'         ...........',;ccclllllc:,...   ,OMMMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWc    .............',;cclloodxdddddool;...  .lWMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMW:    ..'''''''''',;::cccllodddxxxxxkxdo:''. .'0MMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN.   .''''''''''',,;;::cccloddxxxxxkkkkxd:,.. .OMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMk.  .,,''',,,',',,,,;:cccllodxxkkkkkkkkkko:....oMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM:  .''',,,,,,,,,,,,,;:cccllodxkkkkOOkkkOkoc;...cMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMc. .''',,,,,,'',,,,;;:::cccoxkkxkOOOOOOOxdo:,..lMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMd...''',,,,''''',,,,,,;;:cldxkkkkO00OOOOxddc;'.dMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMK...''',,,,,,,,,,;:;,;::coddxkkkkkOOOOOOOxxl:,;KMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMl .'''..'',,,,,;:c:;;ccclllolooddkkOOOOOkdlc;:NMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMK..'...........';::;:cc:;,',,;:ooodkOOOOkdolccWMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN..'.'',,,'.....',;coooc;;,;;:ldkkxxOOkOxoooccNMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM;.,'....     ..',,lxkxc,.... .;:lxkkOkOxooookxNMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM:.''.....    .'..,lkkko,....,;odoodxkkOkllkO0lKMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMc'...............,oxkkxdl:;:codxxddxkkOOxokO0O0MMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMx'''''''........';ldxkkxoccllloodxxkOOkkkdc:oOKMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMd'',,,'''.......':ldxxxc,;:lodddxkOO00Okkdx;cOWMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMl',,,,,,.. ...',,:dOkxdc..':lddxkOOO00Okxdk00XMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMW;''',,,.. ......':oooodo:,..,coxkOOOOOOkxdO00WMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMW''''''...........;ccclloll:..':oxkOOOOOkkdk0KMMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMW,'''...............',;,:cloc:..:dkkkOOOkxdOKWMMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMk..'..........''',',:cclooool:..lxkkOOOkddWMMMMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN,.'...  ..........,,;;ccoc::;''ldkkkkkxokMMMMMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMk.......'''''...',;cldxkkxxo:;lddxxkxdolNMMMMMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMo......'''.''...';cloxxxxkxccloodddllcxMMMMMMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMx.   ...'......',:cloodddocc:cclcccld0MMMMMMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM0.   ...'''''',;cccclcclc:;,;:::cld00WMMMMMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMX'   ...','',;;::clc::;,'',;:::ok00O0NMMMMMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXOo;..    ....'.',;:::;;'',,,;ccoxk000OOOkd0MMMMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWKko:'.      ..     .....',''...,;;,;cddxkO000000Ok:'0MMMMMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWN0koc;..             ''..            ..'',;coddxkOO0000000Ol  .;dWMMMMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMXkl,.                     ',''.....      ...,;cloodxxkkOO000000O;      .cOWMMMMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNk;.                          ',''..........,;::ccllodxxxkkOO000K0l.          .;xNMMMMMMMMMMMM\n \
+ 		MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM0,                              .;,'''.......',;;;:cloddxxkkkOO00kc.                ,xNMMMMMMMMM\n \
+ 		WMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMo                                 ;;,'''......''',;:clldxkkkkOOOOo.                    .lWMMMMMMM\n"
+		 
          jQuery(document).ready(function($) {
              $('body').terminal({
                  help: function() { this.echo("It's a UNIX system! I know this!\nTry `ls` and `cat`."); },
@@ -55,21 +106,29 @@
                  },
 
                  vi: function() {
-                     this.echo("[[;red;]Command 'Sublime Text 2' not found]");
+                     this.echo("[[;red;]Command 'emacs' not found]");
                  },
 
                  vim: function() {
-                     this.echo("[[;red;]Command 'Sublime Text 3' not found]");
+                     this.echo("[[;red;]Command 'vi' not found]");
                  },
 
                  emacs: function() {
                      this.echo("[[;red;]Segmentation fault]");
                  },
-
+				 
+				 sudo: function() {
+                     this.echo(asciiImg);
+                 },
+				 
                  cd: function() {
                      in_home_dir = !in_home_dir;
                  },
-
+				 
+				 su: function() {
+                     this.echo(asciiImg);
+                 },
+				 
                  mplayer: function(filename) {
                      if (!in_home_dir && filename == "nsa_did_heartbleed.avi") {
                          window.open("https://www.youtube.com/watch?v=uGGIrvWIFKw&feature=kp", '_blank');
@@ -79,7 +138,7 @@
                      }
                      
                  }
-             }, { prompt: prompter, greetings:logo + "Coming October 2014. <info@bsidesto.ca>\n", completion:true, checkArity:false});
+             }, { prompt: prompter, greetings:logo + "Coming late November 2014. <info@bsidesto.ca>\n", completion:true, checkArity:false});
 
          });
         </script>

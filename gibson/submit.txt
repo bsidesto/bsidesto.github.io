@@ -1,0 +1,24 @@
+Call For Speakers
+-----------------
+
+Topics that rock our socks off!!
+
+* New ways to hack things
+* Strange hardware and software that you have broken
+* New approaches to defense
+* New tricks in web application hacking
+* Hardware hacking
+* Anything else you think is cool
+
+What to send us (in plain text form):
+
+* Title of the talk
+* Name / handle / twitter / website
+* Length (25 minutes or 50 minutes)
+* Abstract
+* Why it’s interesting
+* Have you presented it before (and if so tell us where)?
+* If you already have them, slides and / or technical papers
+* Completed media consent form 
+
+Please send your submission to cfp@bsidesto.ca
