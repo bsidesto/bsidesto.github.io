@@ -10,11 +10,12 @@ Topics that rock our socks off!!
 * Hardware hacking
 * Anything else you think is cool
 
+All talks should be 25 minutes long.
+
 What to send us (in plain text form):
 
 * Title of the talk
 * Name / handle / twitter / website
-* Length (25 minutes or 50 minutes)
 * Abstract
 * Why it’s interesting
 * Have you presented it before (and if so tell us where)?
