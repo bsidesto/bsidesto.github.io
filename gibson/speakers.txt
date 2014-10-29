@@ -1,0 +1,29 @@
+|------------------+-----------------------------------------------------------------|
+| Talks            |                                                                 |
+|------------------+-----------------------------------------------------------------|
+| Speaker          | Talk                                                            |
+|------------------+-----------------------------------------------------------------|
+| Augusto Barros   | Security and Behavioral Economics                               |
+| Mark Baseggio    | Shut the Front Door                                             |
+| Lee Brotherston  | Corporation in the Middle                                       |
+| Eric Evenchick   | CAN Bus Stuff                                                   |
+| Roy Firestein    | Honeydocs and Offensive Countermeasures                         |
+| Dan Frisch       | Black Hat Python                                                |
+| Stephen Hall     | Gone in 60 seconds - Practical Approaches to Hacking with Yasuo |
+| Saurabh Harit    | Gone in 60 seconds - Practical Approaches to Hacking with Yasuo |
+| Richo Healey     | Debugging with, and Haxing on Voltron                           |
+| Jason Kendall    | Elasticsearch/Logstash/Kibana: Not plain ol’ syslog             |
+| Ben Hughes       | Handmade, Artisan, Probably Knitted Security at Etsy            |
+| Katie Kleemola   | Communities at Risk                                             |
+| Kellman Meghu    | TBA                                                             |
+| Michael Perkin   | Standardizing Security in the Cryptocurrency Industry           |
+| Jeremy Richards  | Fun with Firmware                                               |
+| Allan Stojanovic | Logs and Tactical Defence                                       |
+| Greg Wiseman     | Introducing Recog                                               |
+|------------------+-----------------------------------------------------------------|
+| Special Events   |                                                                 |
+|------------------+-----------------------------------------------------------------|
+| MC               | Event                                                           |
+|------------------+-----------------------------------------------------------------|
+| Seth Hardy       | Powerpoint Karaoke                                              |
+|------------------+-----------------------------------------------------------------|
