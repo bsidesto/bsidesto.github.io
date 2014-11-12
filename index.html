@@ -8,39 +8,34 @@
         <script src="js/jquery.terminal-min.js"></script>
         <link href="css/jquery.terminal.css" rel="stylesheet"/>
         <script>
-		
-	                                                                                                                                       
-                                                                                                                                                 
-        var speakers = " \
-|------------------+-----------------------------------------------------------------|\n \
-| Talks            |                                                                 |\n \
-|------------------+-----------------------------------------------------------------|\n \
-| Speaker          | Talk                                                            |\n \
-|------------------+-----------------------------------------------------------------|\n \
-| Augusto Barros   | Security and Behavioral Economics                               |\n \
-| Mark Baseggio    | Shut the Front Door                                             |\n \
-| Lee Brotherston  | Corporation in the Middle                                       |\n \
-| Eric Evenchick   | CAN Bus Stuff                                                   |\n \
-| Roy Firestein    | Honeydocs and Offensive Countermeasures                         |\n \
-| Dan Frisch       | Black Hat Python                                                |\n \
-| Stephen Hall     | Gone in 60 seconds - Practical Approaches to Hacking with Yasuo |\n \
-| Saurabh Harit    | Gone in 60 seconds - Practical Approaches to Hacking with Yasuo |\n \
-| Richo Healey     | Debugging with, and Haxing on Voltron                           |\n \
-| Jason Kendall    | Elasticsearch/Logstash/Kibana: Not plain ol’ syslog             |\n \
-| Ben Hughes       | Handmade, Artisan, Probably Knitted Security at Etsy            |\n \
-| Katie Kleemola   | Communities at Risk                                             |\n \
-| Kellman Meghu    | TBA                                                             |\n \
-| Michael Perkin   | Standardizing Security in the Cryptocurrency Industry           |\n \
-| Jeremy Richards  | Fun with Firmware                                               |\n \
-| Allan Stojanovic | Logs and Tactical Defence                                       |\n \
-| Greg Wiseman     | Introducing Recog                                               |\n \
-|------------------+-----------------------------------------------------------------|\n \
-| Special Events   |                                                                 |\n \
-|------------------+-----------------------------------------------------------------|\n \
-| MC               | Event                                                           |\n \
-|------------------+-----------------------------------------------------------------|\n \
-| Seth Hardy       | Powerpoint Karaoke                                              |\n \
-|------------------+-----------------------------------------------------------------|\n"
+	        var schedule = " \
+|-------------+--------------------------------+-----------------------------------------------------------------| \n \
+|    Schedule |                                |                                                                 | \n \
+|-------------+--------------------------------+-----------------------------------------------------------------| \n \
+|        Time | Speaker                        | Talk                                                            | \n \
+|-------------+--------------------------------+-----------------------------------------------------------------| \n \
+| 09:00-09:30 | ----                           | Welcome and Registration                                        | \n \
+| 09:30-10:00 | Kellman Meghu                  | A Hitchhikers Guide to Information Security                     | \n \
+| 10:00-10:30 | Richo Healey                   | Debugging with, and Haxing on Voltron                           | \n \
+| 10:30-11:00 | Saurabh Harit and Stephen Hall | Gone in 60 seconds - Practical approaches to hacking with Yasuo | \n \
+| 11:00-11:30 | Katie Kleemola                 | Communities at Risk                                             | \n \
+| 12:00-13:00 | ---                            | Lunch                                                           | \n \
+| 13:00-13:30 | Ben Hughes                     | Handmade, artisan, probably knitted security at Etsy            | \n \
+| 13:30-14:00 | Mark Baseggio                  | Shut the Front Door                                             | \n \
+| 14:00-14:30 | Eric Evenchick                 | Hopping on the CAN Bus                                          | \n \
+| 14:30-15:00 | Greg Wiseman                   | Introducing Recog                                               | \n \
+| 15:00-15:30 | Dan Frisch                     | BlackHat Python                                                 | \n \
+| 15:30-16:00 | ---                            | Break                                                           | \n \
+| 16:00-16:30 | Jeremy Richards                | Firmware Hacking                                                | \n \
+| 16:30-17:00 | Jason Kendall                  | Elasticsearch/Logstash/Kibana: Not plain ol syslog              | \n \
+| 17:00-17:30 | Augusto Barros                 | Security and Behavioral Economics                               | \n \
+| 17:30-18:00 | Michael Perkin                 | Standardizing Security in the Cryptocurrency Industry           | \n \
+| 18:00-18:30 | Allan Stojanovic               | Logs and Tactical Defence                                       | \n \
+| 18:30-19:00 | Introducing Recog              | Honeydocs and Offensive Countermeasures                         | \n \
+|-------------+--------------------------------+-----------------------------------------------------------------| \n \
+| 19:00-Close | Seth Hardy                     | Powerpoint Karaoke                                              | \n \
+|-------------+--------------------------------+-----------------------------------------------------------------| \n"
+
 
          var logo ="    ____ _____ _     __         __________     ___  ____ _____ __\n   / __ ) ___/(_)___/ /__  ______  __/ __ \\   |__ \\/ __ <  / // /\n  / __  \\__ \\/ / __  / _ \\/ ___// / / / / /   __/ / / / / / // /_\n / /_/ /__/ / / /_/ /  __(__  )/ / / /_/ /   / __/ /_/ / /__  __/\n/_____/____/_/\\__,_/\\___/____//_/  \\____/   /____\\____/_/  /_/   \n                                                                 \n"
         
@@ -48,9 +43,9 @@
                       "about.txt":"The second edition of BSidesTO is coming!\nJoin us once again for a day of security talks and other related hijinks.\n\nThis year we'll dropping knowledge and being a community on November 22nd 2014",
                       "cfp.txt":"the CFP is now closed. Submission details _were_ in http://www.bsidesto.ca/gibson/speak.txt",
 		      "conduct.txt":"The code of conduct is at http://www.bsidesto.ca/gibson/conduct.txt",
-                      "speakers.txt": speakers,
+                      "schedule.txt": schedule,
                       "registration.txt":"Register at http://guestli.st/286761",
-                      "sponsors.txt":"Want to be a sponsor? Please email us at info@bsidesto.ca",
+                      "sponsors.txt":"Gold: Check Point. eSentire. Check Point.\nSilver: ElasticSearch.",
                       "venue.txt":"November 22nd, 2014 10am-5pm\nStudio Bar\n824 Dundas St W\nToronto, ON M6J 1V3",
 				  	  "password.txt":"access denied (file owned by root)",};
 
@@ -174,7 +169,9 @@
                  }
              }, { prompt: prompter, greetings:logo + "<info@bsidesto.ca>\nNovember 22nd, 2014 10am-5pm\nStudio Bar\n824 Dundas St W\nToronto, ON M6J 1V3\n\n"
                                                    + "The second edition of BSidesTO is here!\nJoin us once again for a day of security talks and other related hijinks.\n\n"
-                                                   + "See you on November 22nd 2014\n\n[[;green;]Registration:] http://guestli.st/286761\n[[;green;]Speakers:]\n" + speakers, completion:true, checkArity:false});
+                                                   + "See you on November 22nd 2014\n\n[[;green;]Registration:] http://guestli.st/286761\n[[;green;]Schedule:]\n" + schedule
+                                                   + "\n[[;green;]Gold Sponsors]: Check Point(http://www.checkpoint.com/). eSentire(https://www.esentire.com/). Scalar Decisions(http://www.scalar.ca/).\n[[;green;]Silver Sponsors]: ElasticSearch(http://www.elasticsearch.com/)"
+                                                   + "\n[[;green;]Code of Conduct]: http://www.bsidesto.ca/gibson/conduct.txt",  completion:true, checkArity:false});
                                                                                                                                                     
          });
         </script>

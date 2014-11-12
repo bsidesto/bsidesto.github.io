@@ -1,0 +1,26 @@
+|-------------+--------------------------------+-----------------------------------------------------------------|
+|    Schedule |                                |                                                                 |
+|-------------+--------------------------------+-----------------------------------------------------------------|
+|        Time | Speaker                        | Talk                                                            |
+|-------------+--------------------------------+-----------------------------------------------------------------|
+| 09:00-09:30 | ----                           | Welcome and Registration                                        |
+| 09:30-10:00 | Kellman Meghu                  | A Hitchhikers Guide to Information Security                     |
+| 10:00-10:30 | Richo Healey                   | Debugging with, and Haxing on Voltron                           |
+| 10:30-11:00 | Saurabh Harit and Stephen Hall | Gone in 60 seconds - Practical approaches to hacking with Yasuo |
+| 11:00-11:30 | Katie Kleemola                 | Communities at Risk                                             |
+| 12:00-13:00 | ---                            | Lunch                                                           |
+| 13:00-13:30 | Ben Hughes                     | Handmade, artisan, probably knitted security at Etsy            |
+| 13:30-14:00 | Mark Baseggio                  | Shut the Front Door                                             |
+| 14:00-14:30 | Eric Evenchick                 | Hopping on the CAN Bus                                          |
+| 14:30-15:00 | Greg Wiseman                   | Introducing Recog                                               |
+| 15:00-15:30 | Dan Frisch                     | BlackHat Python                                                 |
+| 15:30-16:00 | ---                            | Break                                                           |
+| 16:00-16:30 | Jeremy Richards                | Firmware Hacking                                                |
+| 16:30-17:00 | Jason Kendall                  | Elasticsearch/Logstash/Kibana: Not plain ol syslog              |
+| 17:00-17:30 | Augusto Barros                 | Security and Behavioral Economics                               |
+| 17:30-18:00 | Michael Perkin                 | Standardizing Security in the Cryptocurrency Industry           |
+| 18:00-18:30 | Allan Stojanovic               | Logs and Tactical Defence                                       |
+| 18:30-19:00 | Introducing Recog              | Honeydocs and Offensive Countermeasures                         |
+|-------------+--------------------------------+-----------------------------------------------------------------|
+| 19:00-Close | Seth Hardy                     | Powerpoint Karaoke                                              |
+|-------------+--------------------------------+-----------------------------------------------------------------|
