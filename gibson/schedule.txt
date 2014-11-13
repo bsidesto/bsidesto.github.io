@@ -8,6 +8,7 @@
 | 10:00-10:30 | Richo Healey                   | Debugging with, and Haxing on Voltron                           |
 | 10:30-11:00 | Saurabh Harit and Stephen Hall | Gone in 60 seconds - Practical approaches to hacking with Yasuo |
 | 11:00-11:30 | Katie Kleemola                 | Communities at Risk                                             |
+| 11:30-12:00 | Lee Brotherston                | Corporation in the Middle                                       |
 | 12:00-13:00 | ---                            | Lunch                                                           |
 | 13:00-13:30 | Ben Hughes                     | Handmade, artisan, probably knitted security at Etsy            |
 | 13:30-14:00 | Mark Baseggio                  | Shut the Front Door                                             |
