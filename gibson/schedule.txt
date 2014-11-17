@@ -19,7 +19,7 @@
 | 16:00-16:30 | Jeremy Richards                | Firmware Hacking                                                |
 | 16:30-17:00 | Jason Kendall                  | Elasticsearch/Logstash/Kibana: Not plain ol syslog              |
 | 17:00-17:30 | Augusto Barros                 | Security and Behavioral Economics                               |
-| 17:30-18:00 | Michael Perkin                 | Standardizing Security in the Cryptocurrency Industry           |
+| 17:30-18:00 | Michael Perklin                 | Standardizing Security in the Cryptocurrency Industry           |
 | 18:00-18:30 | Allan Stojanovic               | Logs and Tactical Defence                                       |
 | 18:30-19:00 | Roy Firestein                  | Honeydocs and Offensive Countermeasures                         |
 |-------------+--------------------------------+-----------------------------------------------------------------|
