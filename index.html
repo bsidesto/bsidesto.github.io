@@ -6,7 +6,9 @@
         <script src="js/jquery-1.7.1.min.js"></script>
         <script src="js/jquery.mousewheel-min.js"></script>
         <script src="js/jquery.terminal-min.js"></script>
+        <script src="js/detectmobilebrowser.js"></script>
         <link href="css/jquery.terminal.css" rel="stylesheet"/>
+        <link href="css/style.css" rel="stylesheet"/>
         <script>
 	        var schedule = " \
 |-------------+--------------------------------+-----------------------------------------------------------------| \n \
@@ -111,7 +113,8 @@
 
                
          jQuery(document).ready(function($) {
-             $('body').terminal({
+         if(! jQuery.browser.mobile) {
+            $('body').terminal({
                  help: function() { this.echo("It's a UNIX system! I know this!\nTry `ls` and `cat`."); },
                  ls: function() {
                      if (in_home_dir) {
@@ -171,12 +174,74 @@
              }, { prompt: prompter, greetings:logo + "<info@bsidesto.ca>\nNovember 22nd, 2014 10am-5pm\nStudio Bar\n824 Dundas St W\nToronto, ON M6J 1V3\n\n"
                                                    + "The second edition of BSidesTO is here!\nJoin us once again for a day of security talks and other related hijinks.\n\n"
                                                    + "See you on November 22nd 2014\n\n[[;green;]Registration:] http://guestli.st/286761\n[[;green;]Schedule:]\n" + schedule
-                                                   + "\n[[;green;]Gold Sponsors]: Check Point(http://www.checkpoint.com/). eSentire(https://www.esentire.com/). Scalar Decisions(http://www.scalar.ca/).\n[[;green;]Silver Sponsors]: ElasticSearch(http://www.elasticsearch.com/)"
+                                                   + "\n[[;green;]Gold Sponsors]: Check Point(http://www.checkpoint.com/). eSentire(https://www.esentire.com/). Scalar Decisions(http://www.scalar.ca/).\n[[;green;]Silver Sponsors]: ElasticSearch(http://www.elasticsearch.com/)\n[[;green]Friends]No Starch Press(http://www.nostarch.com). SecTor(http://www.sector.com)"
                                                    + "\n[[;green;]Code of Conduct]: http://www.bsidesto.ca/gibson/conduct.txt",  completion:true, checkArity:false});
                                                                                                                                                     
-         });
+         $("#mobile").hide();}
+         
+
+                               
+                                });
         </script>
     </head>
     <body>
+    <div id="mobile">
+    <pre>
+    ____ _____ _     __         __________     ___  ____ _____ __
+   / __ ) ___/(_)___/ /__  ______  __/ __ \   |__ \/ __ <  / // /
+  / __  \__ \/ / __  / _ \/ ___// / / / / /   __/ / / / / / // /_
+ / /_/ /__/ / / /_/ /  __(__  )/ / / /_/ /   / __/ /_/ / /__  __/
+/_____/____/_/\__,_/\___/____//_/  \____/   /____\____/_/  /_/   
+</pre> 
+
+<b>Downgraded your user experience to mobile-mode</b>
+<h2>Schedule</h2>
+<table border=1>
+<tr>
+  <th>Time</th>
+  <th>Speaker</th>
+  <th>Talk</th>
+</tr>
+<tr>
+<tr><td> 09:00-09:30 </td><td>---</td><td> Welcome and Registration</td></tr>
+<tr><td> 09:30-10:00 </td><td> Kellman Meghu</td><td> A Hitchhikers Guide to Information Security</td></tr>
+<tr><td> 10:00-10:30 </td> <td>Richo Healey </td><td> Debugging with, and Haxing on Voltron</td></tr>
+<tr><td> 10:30-11:00 </td><td> Saurabh Harit and Stephen Hall </td><td> Gone in 60 seconds - Practical approaches to hacking with Yasuo </td></tr>
+<tr><td> 11:00-11:30 </td><td> Katie Kleemola</td><td> Communities at Risk</td></tr>
+<tr><td> 11:30-12:00 </td><td> Lee Brotherston</td><td> Corporation in the Middle</td></tr>
+<tr><td> 12:00-13:00 </td><td> ---</td><td> Lunch</td></tr>
+<tr><td> 13:00-13:30 </td><td> Ben Hughes</td><td> Handmade, artisan, probably knitted security at Etsy</td></tr>
+<tr><td> 13:30-14:00 </td><td> Mark Baseggio</td><td> Shut the Front Door</td></tr>
+<tr><td> 14:00-14:30 </td><td> Eric Evenchick</td><td> Hopping on the CAN Bus</td></tr>
+<tr><td> 14:30-15:00 </td><td> Greg Wiseman</td><td> Introducing Recog</td></tr>
+<tr><td> 15:00-15:30 </td><td> Dan Frisch</td><td> BlackHat Python</td></tr>
+<tr><td> 15:30-16:00 </td><td> ---</td><td> Break</td></tr>
+<tr><td> 16:00-16:30 </td><td> Jeremy Richards</td><td> Firmware Hacking</td></tr>
+<tr><td> 16:30-17:00 </td><td> Jason Kendall</td><td> Elasticsearch/Logstash/Kibana: Not plain ol syslog</td></tr>
+<tr><td> 17:00-17:30 </td><td> Augusto Barros</td><td> Security and Behavioral Economics</td></tr>
+<tr><td> 17:30-18:00 </td><td> Michael Perklin</td><td> Standardizing Security in the Cryptocurrency Industry</td></tr>
+<tr><td> 18:00-18:30 </td><td> Allan Stojanovic</td><td> Logs and Tactical Defence</td></tr>
+<tr><td> 18:30-19:00 </td><td> Roy Firestein</td><td> Honeydocs and Offensive Countermeasures</td></tr>
+<tr><td> 19:00-Close </td><td> Seth Hardy</td><td> Powerpoint Karaoke</td></tr>
+</table>
+
+<h2>Gold Sponsors</h2> 
+<ul>
+<li><a href="http://www.checkpoint.com/">Check Point</a></li>
+<li><a href="https://www.esentire.com/">eSentire</a></li>
+<li><a href="http://www.scalar.ca/">Scalar Decisions</a><li>
+</ul>
+<h2>Silver Sponsors</h2>
+<ul><li><a href="http://www.elasticsearch.com/">ElasticSearch</a></li></ul>
+<h2>Friends</h2>
+<ul><li><a href="http://www.nostarch.com">No Starch Press</a></li>
+<li><a href="http://www.sector.ca">SecTor</a></li></ul>
+<h2>Other</h2>
+<ul>
+<li><a href="http://guestli.st/286761">Register</a></li>
+<li><a href="http://www.bsidesto.ca/gibson/conduct.txt">Code of Conduct</a></li>
+</ul>
+
+</div>
     </body>
 </html>
